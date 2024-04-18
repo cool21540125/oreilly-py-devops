@@ -1,0 +1,3 @@
+[submodule "python_devops_book"]
+	path = python_devops_book
+	url = git@github.com:paiml/python_devops_book.git
