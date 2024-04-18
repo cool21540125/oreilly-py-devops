@@ -26,4 +26,19 @@ twine upload --repository-url https://test.pypi.org/legacy/ dist/hello_world_thi
 
 
 
-```
+# 其他 Linux Distributions 的使用
+
+## Debin 
+
+- 打包 .deb
+- changelog
+- control file
+- debuild
+- Debian repository - reprepro
+
+
+## RPM
+
+- spec file
+- rpmbuild
+- RPM repository - createrepo
