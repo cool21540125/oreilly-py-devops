@@ -2,39 +2,28 @@
 
 
 ```bash
+### Step0. 安裝套件管理工具
 pip install setuptools twine
+# twine 用來上傳 pkg 到 PyPI 的工具
 
+### Step1. 寫 Code
 
-ls
-# README
-# hello_world
-# setup.py
+### Step2. 寫 setup.py
+# 
 
-### setup.py 撰寫完畢後, 打包~
+### Step3. 打包
+rm -rf dist
+rm -rf *.egg-info
 python setup.py sdist
 
+### Step4a. 本地使用 (直接從 "原始碼發佈" (也就是 tar) 做安裝)
+pip install dist/hello_world_this_20240418-0.0.1.tar.gz
 
-ls
-# README
-# hello_world
-# setup.py
-# dist                  <- 裡頭有 hello_world-${version}.tar.gz, 此為 "原始碼發佈"
-# hello_world.egg-info  <- (尚未知)
-
-
-### 可直接從上面的 "原始碼發佈" (也就是 tar) 做安裝
-pip install dist/hello_world-0.0.1.tar.gz
-```
-
-# twine (上傳到 PyPI 新招)
-
-上傳 python package 到 PyPI 的老舊方法為, 使用 setuptools 和 setup.py
-
-而新一代的方式(不曉得 2024 的現在, 是否有其他更新的方法), 則是使用 twine
-
-```bash
-### 上傳到 test PyPI
-twine upload --repository-url https://test.pypi.org/legacy/ dist/hello_world-0.0.1.tar.gz
+### Step4b. 上傳到 PyPI
+twine upload --repository-url https://test.pypi.org/legacy/ dist/hello_world_this_20240418-0.0.1.tar.gz
 # 需要到 PyPI 申請一組 API_TOKEN
+
+
+
 
 ```
