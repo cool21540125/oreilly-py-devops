@@ -36,6 +36,14 @@ pip install --index-url https://test.pypi.org/simple/hello_world_this_20240418
 ### 
 ```
 
+```ini
+# API_TOKEN 可以放到這邊, 避免每次都詢問
+# $HOME/.pypirc
+[testpypi]
+  username = __token__
+  password = pypi-AgENdGVzdC5weXBpLm9yZwIkMzBiNTM1ZjMtYzVlMS00NGQ2LWIxNTUtMWVlNzJiOT
+```
+
 
 # 其他 Linux Distributions 的使用
 
